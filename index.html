@@ -221,7 +221,8 @@ function chips() {
 function setCtrl(c) {
   ctrl = c; try { localStorage.setItem("ctrl", c); } catch (e) {}
   $("c808").className = c === "808D" ? "on" : ""; $("c828").className = c === "828D" ? "on" : "";
-  $("foot").textContent = c + ": faixa " + faixa(c) + " · " + Object.keys(textos()).length + " textos conhecidos · DB1600 v1.3";
+   <!-- $("foot").textContent = c + ": faixa " + faixa(c) + " · " + Object.keys(textos()).length + " textos conhecidos · DB1600 v1.3"; -->
+  $("foot").textContent = Object.keys(textos()).length + " alarmes · funciona sem internet";
   sincTab();
   if (atual !== null && valido(c, atual)) mostrar(atual); else consultar(false);
 }
